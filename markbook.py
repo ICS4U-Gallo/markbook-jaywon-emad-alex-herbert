@@ -79,4 +79,7 @@ def edit_student(student: Dict, **kwargs: Dict):
             data that needs to be changed. Can come in the form
             of a dictionary.
     """
+    for key, value in kwargs.items():
+        student[key] = value
+    
     pass
