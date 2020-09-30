@@ -83,3 +83,37 @@ def edit_student(student: Dict, **kwargs: Dict):
         student[key] = value
     
     pass
+
+def open_classroom(classrooms: Dict):
+# assuming key of the dictionary containing all of the classrooms is classcode.
+    print("List Of Classrooms")
+    for classcode in classrooms:
+        print(classcode)
+    user_input = input("Enter the classcode: ") 
+    if user_input not in classrooms:
+        print('classroom does not exist')
+    else:
+        return classroom[input]
+
+def classroom_options(classroom: Dict):
+    print( '1. Go To The List Of Student:')
+    print('2. Go To The List Of Assignment:')
+    print('3. Edit Classroom Details:')
+    print('4. Exit Program:')
+
+    user_input = int(input("Enter the number: "))
+    while user_input not in [1, 2, 3, 4]:
+        print('wrong input')
+        user_input = int(input("Enter the number: "))
+        
+    if user_input == 1:
+        lst_student = classroom['student_list']
+        # pass a lst_student to the function
+    elif user_input == 2:
+        lst_assignment = classroom['assignment_list']
+        # pass a lst_assignment to the function
+    elif user_input == 3:
+        pass # optional
+    elif user_input == 4:
+        return classroom 
+    
