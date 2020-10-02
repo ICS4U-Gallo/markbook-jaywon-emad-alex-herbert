@@ -146,7 +146,7 @@ def menu_student_list(students: List, classroom: Dict):
             else:
                 print('Student does not exist.')
 
-
+# list out all assignments in a classroom
 def menu_assignment_list(assignments: List):
     print()
     print('List of all Assignments ')
@@ -274,7 +274,7 @@ def menu_calculate_average(student: Dict):
         print (f"{student['first_name']} {student['last_name']}'s average mark is {average}")
         return None
 
-
+# prints all assignment information
 def view_assignment(assignment: Dict):
     print()
     print(f'Name: {assignment["name"]}')
